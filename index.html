@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <label class="switch">
+        <input type="checkbox" id="toggleSwitch">
+        <span class="slider"></span>
+    </label>
+
+    <div class="block active" id="block1">
+        <p>Це перший блок тексту.</p>
+    </div>
+
+    <div class="block" id="block2">
+        <p>Це другий блок тексту.</p>
+    </div>
+
+
+    <script>
+        const toggleSwitch = document.getElementById('toggleSwitch');
+        const block1 = document.getElementById('block1');
+        const block2 = document.getElementById('block2');
+
+        toggleSwitch.addEventListener('change', function () {
+            if (toggleSwitch.checked) {
+                block1.classList.remove('active');
+                block2.classList.add('active');
+            } else {
+                block1.classList.add('active');
+                block2.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
